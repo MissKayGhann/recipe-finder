@@ -35,12 +35,12 @@ const handleDietaryPreferences = () => {
 	return [preferences, intolerances];
 };
 
-// dietaryRequirements.addEventListener("change", () => {
-// 	console.log(checkPreferences());
-// 	console.log(handleDietaryPreferences());
+dietaryRequirements.addEventListener("change", () => {
+	console.log(checkPreferences());
+	console.log(handleDietaryPreferences());
 
-// 	handleDietaryFetch();
-// });
+	handleDietaryFetch();
+});
 
 const handleDietaryFetch = async () => {
 	const dietary = handleDietaryPreferences()[0];
