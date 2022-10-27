@@ -33,7 +33,6 @@ const handleDietaryPreferences = () => {
 };
 
 const handleDietaryFetch = async () => {
-	const dietary = handleDietaryPreferences()[0];
 	const [preferences, intolerances] = handleDietaryPreferences();
 	const res = await fetch(
 		`https://api.spoonacular.com/recipes/complexSearch?diet=${preferences}&intolerances=${
@@ -90,4 +89,12 @@ const handleNutrientsFetch = async () => {
 	return data;
 };
 
-export { handleDietaryFetch, handleNutrientsFetch };
+const grabSummary = async (id) => {
+	const res = await fetch(
+		`https://api.spoonacular.com/recipes/${id}/information?includeNutrition=false${apiKey}`
+	);
+	const data = await res.json();
+	return data.summary;
+};
+
+export { handleDietaryFetch, handleNutrientsFetch, grabSummary };

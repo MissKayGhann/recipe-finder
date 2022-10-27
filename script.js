@@ -1,4 +1,8 @@
-import { handleDietaryFetch, handleNutrientsFetch } from "./api/api.js";
+import {
+	handleDietaryFetch,
+	handleNutrientsFetch,
+	grabSummary,
+} from "./api/api.js";
 
 const dietaryRequirements = document.querySelector("#dietary-require");
 const caloriesPref = document.querySelector("#calories");
@@ -20,9 +24,12 @@ const createCard = (recipe, summary) => {
 	return div;
 };
 
+// The event listeners below are just for testing the output from the api for now.
 dietaryRequirements.addEventListener("change", async () => {
 	const dietary = await handleDietaryFetch();
-	console.log(dietary);
+	const summary = await grabSummary(dietary.results[0].id);
+	console.log(dietary.results[0].id);
+	console.log(summary);
 });
 
 caloriesPref.addEventListener("change", async () => {
