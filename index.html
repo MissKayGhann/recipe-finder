@@ -37,7 +37,7 @@
     </header>
 
     <section>
-        <form action="">
+        <form action="" id="save-form">
             <div class="search">
                 <input type="text" name="search-bar" id="search-bar" placeholder="Search...">
                 <button type="submit" id="bttn">
@@ -51,16 +51,19 @@
             <div id="btn-container">
                 <select name="dietary-require" id="dietary-require">
                     <!-- <option value="vegetarian"><input type="checkbox" name="" id=""></option> -->
+                    <option value="dietrary">Dietary Requriements</option>
                     <option value="vegetarian">Vegetarian</option>
                     <option value="vegan">Vegan</option>
                     <option value="gluten-free">Gluten-Free</option>
                     <option value="dairy-free">Dairy-Free</option>
+                    <option value="none">None</option>
                 </select>
                 <div id="ingredients-div">
                     <input type="checkbox" id="ingredients" name="ingredients">
                     <label for="ingredients">Ingredients</label>
                 </div>
                 <select name="calories" id="calories">
+                    <option value="calories">Calories</option>
                     <option value="less-501">500 calories and less</option>
                     <option value="less-751">501 calories - 750 calories</option>
                     <option value="less-1001">751 calories - 1000 calories</option>
