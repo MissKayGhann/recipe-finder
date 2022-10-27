@@ -16,33 +16,32 @@ body {
 
 
 .search {
-    display: grid;
-    grid-template-columns: 3;
+    /* display: grid;
+    grid-template-columns: 3; */
 }
 
 
-.material-symbols-outlined {
+/* .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
   'wght' 400,
   'GRAD' 0,
   'opsz' 48
-}
+} */
 
 
 button {
     width: 12vw;
     align-items: center;
     margin-left: 45%;
-    grid-area: 3;
     background-color: transparent;
     border: grey;
 }
 
 #bttn {
     position: absolute;
-    top: 15.4%;
-    left: 11%;
+    top: 13%;
+    left: 13%;
     border-radius: 40%;
 }
 
@@ -60,7 +59,7 @@ button {
     /* padding: 10px; */
     /* margin: 10px; */
     align-content: center;
-    flex: 1;
+    width: 33%;
     
     
     
@@ -70,14 +69,15 @@ button {
     /* padding: 10px; */
     /* margin: 10px; */
     text-align: center;
-    flex: 1;
+    width: 33%;
 }
 
 
 #btn-container {
     display: flex;
+    width: 100%;
 }
 
 #ingredients-div {
-    flex: 1;
+    width: 33%;
 }
