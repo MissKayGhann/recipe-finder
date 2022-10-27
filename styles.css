@@ -11,8 +11,9 @@ section {
 
 body {
     text-align: center;
-    width: 95vw;
+    width: 100vw;
     margin: 1rem;
+    background-color: grey;
 }
 
 
@@ -43,6 +44,7 @@ button {
     top: 14%;
     left: 59%;
     border-radius: 40%;
+    
 }
 
 #search-bar {
@@ -51,24 +53,26 @@ button {
     padding: 10px;
     margin-top: 30px;
     border-radius: 15px;
+    box-shadow: 3px 5px rgb(0, 0, 0, 0.4);
     
 }
 
 #dietary-require {
-    /* padding: 10px; */
-    /* margin: 10px; */
+    padding: 5px;
+    margin: 5px;
     align-content: center;
     width: 33%;
-    
-    
+
+ 
     
 }
 
 #calories{
-    /* padding: 10px; */
-    /* margin: 10px; */
+    padding: 5px;
+    margin: 5px;
     text-align: center;
     width: 33%;
+    
 }
 
 
@@ -117,4 +121,12 @@ button {
     color: purple;
     font-family: 'Poppins', sans-serif;
     font-style: italic;
+}
+
+#container {
+    background-color: white;
+    width: 100vw;
+    height: 15vw;
+    /* margin: 10px; */
+    /* padding: 10px; */
 }
