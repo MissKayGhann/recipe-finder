@@ -1,0 +1,52 @@
+h1 {
+    text-align: center;
+    font-family: sans-serif;
+    color: blue;
+}
+
+section {
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+body {
+    text-align: center;
+    width: 100vw;
+}
+
+
+#search-bar{
+    
+    display: block;
+  margin: 0 auto;
+  padding: 10px;
+  margin-top: 30px;
+  border-radius: 15px;
+    
+}
+
+#dietary-require {
+    /* padding: 10px; */
+    /* margin: 10px; */
+    align-content: center;
+    flex: 1;
+    
+    
+    
+}
+
+#calories{
+    /* padding: 10px; */
+    /* margin: 10px; */
+    text-align: center;
+    flex: 1;
+}
+
+
+#btn-container {
+    display: flex;
+}
+
+#ingredients-div {
+    flex: 1;
+}
