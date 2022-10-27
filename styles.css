@@ -12,13 +12,14 @@ section {
 body {
     text-align: center;
     width: 95vw;
+    margin: 1rem;
 }
 
 
-.search {
-    /* display: grid;
-    grid-template-columns: 3; */
-}
+/* .search {
+    display: grid;
+    grid-template-columns: 3;
+} */
 
 
 /* .material-symbols-outlined {
@@ -33,25 +34,23 @@ body {
 button {
     width: 12vw;
     align-items: center;
-    margin-left: 45%;
     background-color: transparent;
     border: grey;
 }
 
 #bttn {
     position: absolute;
-    top: 13%;
-    left: 13%;
+    top: 14%;
+    left: 59%;
     border-radius: 40%;
 }
 
-#search-bar{
-    
+#search-bar {
     display: block;
-  margin: 0 auto;
-  padding: 10px;
-  margin-top: 30px;
-  border-radius: 15px;
+    margin: 0 auto;
+    padding: 10px;
+    margin-top: 30px;
+    border-radius: 15px;
     
 }
 
@@ -76,8 +75,46 @@ button {
 #btn-container {
     display: flex;
     width: 100%;
+    align-items: center;
+    
 }
 
 #ingredients-div {
     width: 33%;
+}
+
+.r {
+    color: red;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+}
+
+.e {
+    color: orange;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+}
+
+.c {
+    color: yellow;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+}
+
+.i {
+    color: green;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+}
+
+.p {
+    color: blue;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+}
+
+.e {
+    color: purple;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
 }
