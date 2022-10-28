@@ -2,9 +2,12 @@ import {
 	handleDietaryFetch,
 	handleNutrientsFetch,
 	grabSummary,
+	handleIngredientsFetch,
 } from "./api/api.js";
 
 const dietaryRequirements = document.querySelector("#dietary-require");
+const searchBar = document.querySelector("#search-bar");
+const searchButton = document.querySelector("#bttn");
 const caloriesPref = document.querySelector("#calories");
 
 const createCard = async (recipe) => {
@@ -47,5 +50,16 @@ dietaryRequirements.addEventListener("change", async () => {
 });
 
 caloriesPref.addEventListener("change", async () => {
-	await handleNutrientsFetch();
+	const nutrients = await handleNutrientsFetch();
+	for (let i = 0; i < nutrients.length; i++) {
+		createCard(nutrients[i]);
+	}
+});
+
+searchButton.addEventListener("click", async (event) => {
+	event.preventDefault();
+	const ingredients = await handleIngredientsFetch();
+	for (let i = 0; i < ingredients.length; i++) {
+		createCard(ingredients[i]);
+	}
 });

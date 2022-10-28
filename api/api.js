@@ -1,10 +1,22 @@
 const dietaryRequirements = document.querySelector("#dietary-require");
+const searchBar = document.querySelector("#search-bar");
 const caloriesPref = document.querySelector("#calories");
 
 // API:
-const apiKey = "&apiKey=00b3e83ca4da4adaa3ac5e0d9107e8c1";
-const nutrientsURL = "";
+const apiKey = "&apiKey=99dcafb1fccc45c0937b0468adae5600";
 const ingredientsURL = "https://api.spoonacular.com/recipes/findByIngredients";
+
+const handleIngredientsFetch = async () => {
+	const pref = searchBar.value.trim();
+	const res = await fetch(
+		`https://api.spoonacular.com/recipes/findByIngredients?ingredients=${
+			pref + apiKey
+		}&number=11`
+	);
+	const data = await res.json();
+	console.log(data);
+	return data;
+};
 
 const handleDietaryPreferences = () => {
 	// currently only support vegetarian and vegan preferences, need to work on gluten-free & dairy-free
@@ -37,7 +49,7 @@ const handleDietaryFetch = async () => {
 	const res = await fetch(
 		`https://api.spoonacular.com/recipes/complexSearch?diet=${preferences}&intolerances=${
 			intolerances + apiKey
-		}`
+		}&number=11`
 	);
 	const data = await res.json();
 	return data.results;
@@ -81,7 +93,9 @@ const handleNutrientsFetch = async () => {
 	const [nutrient, bounds] = handleNutrientsPreferences();
 	const search = `min${nutrient}=${bounds[0]}&max${nutrient}=${bounds[1]}`;
 	const res = await fetch(
-		`https://api.spoonacular.com/recipes/findByNutrients?${search + apiKey}`
+		`https://api.spoonacular.com/recipes/findByNutrients?${
+			search + apiKey
+		}&number=11`
 	);
 	const data = await res.json();
 	console.log(data);
@@ -96,4 +110,9 @@ const grabSummary = async (id) => {
 	return data.summary;
 };
 
-export { handleDietaryFetch, handleNutrientsFetch, grabSummary };
+export {
+	handleDietaryFetch,
+	handleNutrientsFetch,
+	grabSummary,
+	handleIngredientsFetch,
+};

@@ -15,6 +15,7 @@ body {
     background-color: grey;
     justify-content: center;
     margin: 0;
+    background-color: #FDF0D5;
 }
 
 section {
@@ -33,17 +34,18 @@ section {
 .search {
     display: flex;
     align-items: stretch;
+
 }
 
 #search-bar {
     border-bottom-left-radius: 2rem;
     border-top-left-radius: 2rem;
     box-shadow: -3px 5px rgb(0, 0, 0, 0.4);
-    border: 1px solid orangered;   
+    border: 1px solid #5E4352;   
 }
 
 #search-bar::placeholder {
-    color: orangered;
+    color: #EF709D;
     
 }
 
@@ -75,8 +77,7 @@ button {
     box-shadow: 0px 5px rgb(0, 0, 0, 0.4);
     background-color: transparent;
     border: none;
-    background-color: orangered;
-    
+    background-color: #5E4352;
 }
 
 #dietary-require {
@@ -94,6 +95,7 @@ button {
 #btn-container {
     display: flex;
     width: 100%;
+    /* justify-content: space-around; */
     align-items: center;
     
 }
@@ -111,6 +113,7 @@ button {
     overflow: hidden;
     box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
     margin-bottom: 2rem;
+    background-color: white;
 }
 
 img {
@@ -167,6 +170,20 @@ img {
     height: 15vw;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h4 {
+    font-size: 2.3vw;
+    font-family: cursive;
+}
+
+p {
+    font-family: 'Ariozonia';
+}
+
 @media screen  and (min-width: 768px) {
     .meal-results {
         overflow: hidden;
@@ -186,17 +203,18 @@ img {
 
     .search {
         display: flex;
+        height: 5vh;
     }
 
     #bttn {
         width: 4vw;
-        height: 4vh;
+        height: 5vh;
         border-bottom-right-radius: 2rem;
         border-top-right-radius: 2rem;
         box-shadow: 0px 5px rgb(0, 0, 0, 0.4);
         background-color: transparent;
         border: none;
-        background-color: orangered;
+        background-color: #5E4352;
         
     }
 
@@ -204,7 +222,6 @@ img {
         border-bottom-left-radius: 2rem;
         border-top-left-radius: 2rem;
         box-shadow: -3px 5px rgb(0, 0, 0, 0.4);
-        border: 1px solid orangered; 
         width: 10vw;  
     }
 
@@ -217,7 +234,14 @@ img {
         display: flex;
         width: 40%;
         align-items: center;
-        
+        justify-content: space-around;
+    }
+
+    #btn-container select {
+        height: 5vh;
+        width: 19vw;
+        border: 2px solid transparent;
+        border-radius: 2em;
     }
 
     hr {
