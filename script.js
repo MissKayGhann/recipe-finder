@@ -33,8 +33,7 @@ const createCard = async (recipe) => {
 
     const p = document.createElement('p')
     p.innerText = await grabSummary(recipe.id)
-    mealName.appendChild(p)
-    
+    mealName.appendChild(p)  
 
     const a = document.createElement('a')
     mealName.appendChild(a)
@@ -48,8 +47,6 @@ dietaryRequirements.addEventListener("change", async () => {
 	const dietary = await handleDietaryFetch();
     for (let i = 0; i < dietary.length; i++) {
        createCard(dietary[i])
-
-     
     }
 //	console.log(dietary)
 });

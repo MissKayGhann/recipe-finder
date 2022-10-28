@@ -2,7 +2,7 @@ const dietaryRequirements = document.querySelector("#dietary-require");
 const caloriesPref = document.querySelector("#calories");
 
 // API:
-const apiKey = "&apiKey=5796988221df45bbbca5e6e2a2ac1cc5";
+const apiKey = "&apiKey=00b3e83ca4da4adaa3ac5e0d9107e8c1";
 const nutrientsURL = "";
 const ingredientsURL = "https://api.spoonacular.com/recipes/findByIngredients";
 
