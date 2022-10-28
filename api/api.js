@@ -3,7 +3,7 @@ const searchBar = document.querySelector("#search-bar");
 const caloriesPref = document.querySelector("#calories");
 
 // API:
-const apiKey = "&apiKey=99dcafb1fccc45c0937b0468adae5600";
+const apiKey = "&apiKey=80c1f110d5da43ec835067fbdcca16f7";
 const ingredientsURL = "https://api.spoonacular.com/recipes/findByIngredients";
 
 const handleIngredientsFetch = async () => {
