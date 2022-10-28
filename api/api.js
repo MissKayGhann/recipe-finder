@@ -5,9 +5,6 @@ const caloriesPref = document.querySelector("#calories");
 const apiKey = "&apiKey=5796988221df45bbbca5e6e2a2ac1cc5";
 const nutrientsURL = "";
 const ingredientsURL = "https://api.spoonacular.com/recipes/findByIngredients";
-const checkPreferences = () => {
-	return [dietaryRequirements.value, caloriesPref.value];
-};
 
 const handleDietaryPreferences = () => {
 	// currently only support vegetarian and vegan preferences, need to work on gluten-free & dairy-free
@@ -35,15 +32,7 @@ const handleDietaryPreferences = () => {
 	return [preferences, intolerances];
 };
 
-dietaryRequirements.addEventListener("change", () => {
-	console.log(checkPreferences());
-	console.log(handleDietaryPreferences());
-
-	handleDietaryFetch();
-});
-
 const handleDietaryFetch = async () => {
-	const dietary = handleDietaryPreferences()[0];
 	const [preferences, intolerances] = handleDietaryPreferences();
 	const res = await fetch(
 		`https://api.spoonacular.com/recipes/complexSearch?diet=${preferences}&intolerances=${
@@ -51,8 +40,12 @@ const handleDietaryFetch = async () => {
 		}`
 	);
 	const data = await res.json();
-	console.log(data.results[0]);
+	console.log(data);
 	return data;
+};
+
+const checkPreferences = () => {
+	return [dietaryRequirements.value, caloriesPref.value];
 };
 
 const handleNutrientsPreferences = () => {
@@ -78,6 +71,8 @@ const handleNutrientsPreferences = () => {
 			break;
 
 		default:
+			bounds[0] = 0;
+			bounds[1] = 5000;
 			break;
 	}
 	return ["Calories", bounds];
@@ -90,17 +85,16 @@ const handleNutrientsFetch = async () => {
 		`https://api.spoonacular.com/recipes/findByNutrients?${search + apiKey}`
 	);
 	const data = await res.json();
-	console.log(data[1]);
+	console.log(data);
+	return data;
 };
 
-caloriesPref.addEventListener("change", () => {
-	handleNutrientsFetch();
-});
+const grabSummary = async (id) => {
+	const res = await fetch(
+		`https://api.spoonacular.com/recipes/${id}/information?includeNutrition=false${apiKey}`
+	);
+	const data = await res.json();
+	return data.summary;
+};
 
-// const createCard = (recipe) => {
-// 	const div = document.createElement("div");
-// 	const img = document.createElement("img");
-// 	const title = document.createElement("h4");
-// 	title.innerText = recipe.title;
-//	img.src = recipe.image;
-// };
+export { handleDietaryFetch, handleNutrientsFetch, grabSummary };
