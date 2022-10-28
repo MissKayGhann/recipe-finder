@@ -95,9 +95,16 @@ button {
 #btn-container {
     display: flex;
     width: 100%;
-    /* justify-content: space-around; */
+    justify-content: space-around;
     align-items: center;
     
+}
+
+#btn-container select {
+    height: 5vh;
+    width: 19vw;
+    border: 2px solid transparent;
+    border-radius: 2em;
 }
 
 #ingredients-div {
@@ -247,9 +254,27 @@ p {
     hr {
         display: none;
     }
+
+    #container {
+        height: 15vw;
+
+    }
     
     img {
         width: 100%;
         display: block;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    h4 {
+        font-size: 2.3vw;
+        font-family: cursive;
+    }
+    
+    p {
+        font-family: 'Ariozonia';
     }
 }
