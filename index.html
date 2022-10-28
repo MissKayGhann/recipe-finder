@@ -5,35 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
     <title>Recipe Finder</title>
 </head>
 <body>
 
     <header>
-        <h1>Recipe Finder</h1>
+        <h1><span class="r">
+           R 
+        </span>
+        <span class="e">
+            e
+        </span>
+        <span class="c">
+            c
+        </span>
+        <span class="i">
+            i
+        </span>
+        <span class="p">
+           p 
+        </span>
+        <span class="e">
+           e    
+        </span>
+               F i n d e r <span class="material-symbols-outlined">search</span></h1>
     </header>
 
     <section>
-        <form action="">
-            <input type="text" name="search-bar" id="search-bar" placeholder="Search...">
-            <button type="submit"><i class="fas fa-search"></i></button>
-            
+        <form action="" id="save-form">
+            <div class="search">
+                <input type="text" name="search-bar" id="search-bar" placeholder="Separate ingredients with commas...">
+                <button type="submit" id="bttn">
+                    <span class="material-symbols-outlined">
+                        search
+                        </span>
+                </button>
+            </div>
             
             <br>
-            
             <div id="btn-container">
                 <select name="dietary-require" id="dietary-require">
                     <!-- <option value="vegetarian"><input type="checkbox" name="" id=""></option> -->
+                    <option value="dietrary">Dietary Requriements</option>
                     <option value="vegetarian">Vegetarian</option>
                     <option value="vegan">Vegan</option>
                     <option value="gluten-free">Gluten-Free</option>
                     <option value="dairy-free">Dairy-Free</option>
+                    <option value="none">None</option>
                 </select>
-                <div id="ingredients-div">
-                    <input type="checkbox" id="ingredients" name="ingredients">
-                    <label for="ingredients">Ingredients</label>
-                </div>
                 <select name="calories" id="calories">
+                    <option value="calories">Calories</option>
                     <option value="less-501">500 calories and less</option>
                     <option value="less-751">501 calories - 750 calories</option>
                     <option value="less-1001">751 calories - 1000 calories</option>
@@ -44,15 +76,27 @@
     </section>
 
     <main>
-        <section class="container" id="container">
-            
-        </section>
+        <div class="meal-results" id="meal-results">
+            <div class="title">
+                <div class="meal">
+                    <div class="meal-image">
+                        <img src="https://images.food52.com/e6RyxggWQpBwCPcd3kugqz01J54=/2016x1344/filters:format(webp)/583d2633-65c0-43d6-9b52-cba0c8fa1399--2019-1210_nigerian-jollof-rice_3x2_rocky-luten_006.jpg" alt="Jollof Rice">
+                    </div>
+                    <div class="meal-name">
+                        <h4>Jollof Rice</h4>
+                        <p class="meal-summary">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa voluptatum cupiditate, obcaecati ullam illum autem nobis animi quae voluptas, eum quia. Mollitia neque atque explicabo. Beatae hic laboriosam sequi fugiat!</p>
+                        <a href="" class="meal-bttn">Get Recipe</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
 
     </footer>
 
-    <script src="script.js">
+    <script src="script.js" type="module">
     </script>
+    <script src="./api/api.js" type="module"></script>
 </body>
 </html>
